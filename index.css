@@ -1,6 +1,7 @@
 body {
     padding: 2%;
     background-color: #7dd8dc;
+    user-select: none;
 }
 
 #heading {
