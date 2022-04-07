@@ -1,0 +1,49 @@
+body {
+    padding: 2%;
+    background-color: #7dd8dc;
+}
+
+#heading {
+    font-family: "Pacifico", cursive;
+    color: white;
+    font-size: 40pt;
+}
+
+#days-count-card {
+    font-family: "Pacifico", cursive;
+    text-align: center;
+    background-color: rgba(240, 248, 255, 0.788);
+    padding: 5%;
+    height: 300px;
+    border-radius: 30px;
+}
+
+#days-count {
+    font-size: 100pt;
+}
+
+#days-count-text {
+    font-family: "Neucha", cursive;
+    font-size: 25pt;
+}
+
+#motivation-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#forest-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#forest-img img {
+    width: 100vw;
+    opacity: 0.05;
+}
+
+#motivation-img img {
+    height: 100vh;
+}
