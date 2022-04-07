@@ -47,3 +47,10 @@ body {
 #motivation-img img {
     height: 100vh;
 }
+
+#success-quote {
+    margin: 5%;
+    font-size: 40pt;
+    color: white;
+    font-family: 'Bangers', cursive;
+}
