@@ -9,23 +9,45 @@ body {
     font-size: 40pt;
 }
 
-#days-count-card {
-    font-family: "Pacifico", cursive;
+#days-remaining-count-card {
+    font-family: "Neucha", cursive;
     text-align: center;
     background-color: rgba(240, 248, 255, 0.788);
     padding: 5%;
-    height: 300px;
+    /* height: 300px; */
     border-radius: 30px;
 }
 
 #days-count {
-    font-size: 100pt;
+    font-size: 50pt;
+    display: block;
 }
 
-#days-count-text {
-    font-family: "Neucha", cursive;
-    font-size: 25pt;
+.time-count {
+    font-size: 40pt;
+    display: block;
 }
+
+#days-div {
+    display: block;
+}
+
+.time-div {
+    display: inline-block;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+
+.neucha {
+    font-family: "Neucha", cursive;
+}
+
+.pt-20 {
+    font-size: 20pt;
+}
+
 
 #motivation-img {
     position: absolute;
@@ -51,8 +73,9 @@ body {
 }
 
 #success-quote {
-    margin: 5%;
+    /* margin: 5%; */
     font-size: 40pt;
     color: white;
     font-family: 'Bangers', cursive;
+    text-align: center;
 }

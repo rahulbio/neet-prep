@@ -38,21 +38,35 @@
         ></script>
     </head>
     <body>
-        <h1 id="heading">Hi Rahul, <span id="greeting"></span>!</h1><br>
+        <h1 id="heading">Hi Rahul, <span id="greeting"></span>!</h1>
+        <br />
         <br />
 
         <div class="row">
-            <div class="col-lg-3">
-                <div id="days-count-card">
-                    <div>
-                        <span id="days-count"> </span>
-                        <br /><span id="days-count-text">days to go</span>
+            <div class="col-lg-4">
+                <div id="days-remaining-count-card">
+                    <div id="days-div">
+                        <span id="days-count"></span>
+                        <span class="neucha pt-20">days</span>
+                    </div>
+                    <hr />
+                    <div class="time-div">
+                        <span id="hours-count" class="time-count"></span>
+                        <span class="neucha pt-20">hours</span>
+                    </div>
+                    <div class="time-div">
+                        <span id="minutes-count" class="time-count"></span>
+                        <span class="neucha pt-20">minutes</span>
+                    </div>
+                    <div class="time-div">
+                        <span id="seconds-count" class="time-count"></span>
+                        <span class="neucha pt-20">seconds</span>
                     </div>
                 </div>
                 <br /><br />
-                <div id="success-quote">Success is yours !!!</div>
+                <p id="success-quote">Success is <br />yours !!!</p>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <div id="calendar">
                     <div id="calendar_header">
                         <span class="icon-chevron-left"> ‹ </span>
@@ -74,24 +88,35 @@
             <img src="forest_012x.png" alt="forest" />
         </div>
 
-        <script src="calendar.js"></script>
-
         <script>
-            const today = new Date();
-            const date2 = new Date("7/17/2022");
-            const diffTime = Math.abs(date2 - today);
-            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-            document.getElementById("days-count").innerHTML = diffDays;
+            function setTimeOnPage() {
+                const today = new Date();
+                const date2 = new Date("7/17/2022");
+                const diffTime = Math.abs(date2 - today);
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-            var greeting = document.getElementById("greeting");
-            var curHr = today.getHours();
-            if (curHr < 12) {
-                greeting.innerHTML = "Good morning";
-            } else if (curHr < 18) {
-                greeting.innerHTML = "Good afternoon";
-            } else {
-                greeting.innerHTML = "Good evening";
+                const dateDiff = new Date(diffTime);
+                document.getElementById("days-count").innerHTML = diffDays;
+                document.getElementById("hours-count").innerHTML = dateDiff.getHours();
+                document.getElementById("minutes-count").innerHTML = dateDiff.getMinutes();
+                document.getElementById("seconds-count").innerHTML = dateDiff.getSeconds();
+
+                var greeting = document.getElementById("greeting");
+                var curHr = today.getHours();
+                if (curHr < 12) {
+                    greeting.innerHTML = "Good morning";
+                } else if (curHr < 18) {
+                    greeting.innerHTML = "Good afternoon";
+                } else {
+                    greeting.innerHTML = "Good evening";
+                }
             }
+
+            setInterval(() => {
+                setTimeOnPage();
+            }, 1000);
         </script>
+
+        <script src="calendar.js"></script>
     </body>
 </html>
